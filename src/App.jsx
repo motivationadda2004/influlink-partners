@@ -14,18 +14,21 @@ function App() {
           campaigns across Instagram, YouTube, and emerging platforms.
         </p>
         <button
-          style={{
-            padding: "12px 24px",
-            fontSize: "16px",
-            backgroundColor: "black",
-            color: "white",
-            border: "none",
-            borderRadius: "6px",
-            cursor: "pointer",
-          }}
-        >
-          Get Started
-        </button>
+  onClick={() => {
+    document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+  }}
+  style={{
+    padding: "12px 24px",
+    fontSize: "16px",
+    backgroundColor: "black",
+    color: "white",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+  }}
+>
+  Get Started
+</button>
       </section>
 
       <section style={{ textAlign: "center" }}>
