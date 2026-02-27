@@ -12,14 +12,25 @@ function App() {
       <nav style={{
         display: "flex",
         justifyContent: "space-between",
+        alignItems: "center",
         padding: "20px 40px",
         position: "sticky",
         top: 0,
-        background: "white"
+        background: "white",
+        boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
+        zIndex: 1000
       }}>
-        <div style={{ fontWeight: "bold", fontSize: "20px" }}>
-          InfluLink Partners
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <img 
+            src="/logo.png" 
+            alt="InfluLink Partners Logo" 
+            style={{ height: "36px" }} 
+          />
+          <span style={{ fontWeight: "bold", fontSize: "18px" }}>
+            InfluLink Partners
+          </span>
         </div>
+
         <div style={{ fontWeight: "500", cursor: "pointer" }}>
           Contact
         </div>
@@ -28,7 +39,7 @@ function App() {
       {/* HERO SECTION */}
       <section style={{
         textAlign: "center",
-        padding: "100px 20px",
+        padding: "120px 20px",
         background: "linear-gradient(135deg, #f5f7ff, #e8ecff)"
       }}>
         <h1 style={{ fontSize: "52px", maxWidth: "900px", margin: "0 auto 20px" }}>
@@ -106,9 +117,9 @@ function App() {
             <div key={index} style={{
               background: "white",
               padding: "30px",
-              borderRadius: "12px",
+              borderRadius: "16px",
               width: "280px",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
+              boxShadow: "0 15px 40px rgba(0,0,0,0.05)"
             }}>
               <h3 style={{ marginBottom: "10px" }}>{service}</h3>
               <p style={{ color: "#666", fontSize: "14px" }}>
@@ -119,32 +130,11 @@ function App() {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
-      <section style={{
-        padding: "100px 20px",
-        textAlign: "center",
-        background: "white"
-      }}>
-        <h2 style={{ fontSize: "32px", marginBottom: "30px" }}>
-          What Our Partners Say
-        </h2>
-
-        <p style={{
-          maxWidth: "600px",
-          margin: "0 auto",
-          fontStyle: "italic",
-          color: "#555"
-        }}>
-          "InfluLink Partners transformed our influencer strategy. We saw measurable
-          growth in engagement and revenue within months."
-        </p>
-      </section>
-
       {/* CTA */}
       <section style={{
         padding: "100px 20px",
         textAlign: "center",
-        background: "#4f46e5",
+        background: "linear-gradient(135deg, #4f46e5, #6366f1)",
         color: "white"
       }}>
         <h2 style={{ fontSize: "36px", marginBottom: "20px" }}>
