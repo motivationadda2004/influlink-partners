@@ -1,0 +1,5 @@
+public/
+   logo.png   ← (image file, not code)
+src/
+   App.jsx
+   main.jsx
