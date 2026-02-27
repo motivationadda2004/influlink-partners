@@ -1,45 +1,178 @@
 import React from "react";
 
 function App() {
-  return (
-    <div style={{ fontFamily: "Arial, sans-serif", padding: "40px" }}>
-      
-      <section style={{ textAlign: "center", marginBottom: "60px" }}>
-        <h1 style={{ fontSize: "48px", marginBottom: "20px" }}>
-          Connecting Brands with Authentic Influence
-        </h1>
-        <p style={{ fontSize: "18px", maxWidth: "700px", margin: "0 auto 30px" }}>
-          InfluLink Partners bridges the gap between ambitious brands and
-          high-impact creators to deliver measurable, performance-driven
-          campaigns across Instagram, YouTube, and emerging platforms.
-        </p>
-        <button
-  onClick={() => {
+  const scrollToServices = () => {
     document.getElementById("services").scrollIntoView({ behavior: "smooth" });
-  }}
-  style={{
-    padding: "12px 24px",
-    fontSize: "16px",
-    backgroundColor: "black",
-    color: "white",
-    border: "none",
-    borderRadius: "6px",
-    cursor: "pointer",
-  }}
->
-  Get Started
-</button>
+  };
+
+  return (
+    <div style={{ fontFamily: "Inter, sans-serif", color: "#111" }}>
+
+      {/* NAVBAR */}
+      <nav style={{
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "20px 40px",
+        position: "sticky",
+        top: 0,
+        background: "white"
+      }}>
+        <div style={{ fontWeight: "bold", fontSize: "20px" }}>
+          InfluLink Partners
+        </div>
+        <div style={{ fontWeight: "500", cursor: "pointer" }}>
+          Contact
+        </div>
+      </nav>
+
+      {/* HERO SECTION */}
+      <section style={{
+        textAlign: "center",
+        padding: "100px 20px",
+        background: "linear-gradient(135deg, #f5f7ff, #e8ecff)"
+      }}>
+        <h1 style={{ fontSize: "52px", maxWidth: "900px", margin: "0 auto 20px" }}>
+          Bridge the Gap Between <span style={{ color: "#4f46e5" }}>Brands</span> and Influence
+        </h1>
+
+        <p style={{ fontSize: "18px", maxWidth: "650px", margin: "0 auto 30px", color: "#555" }}>
+          We connect ambitious brands with high-impact creators to deliver
+          measurable, performance-driven campaigns across digital platforms.
+        </p>
+
+        <button
+          onClick={scrollToServices}
+          style={{
+            padding: "14px 28px",
+            fontSize: "16px",
+            backgroundColor: "#4f46e5",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+            boxShadow: "0 10px 25px rgba(79,70,229,0.3)"
+          }}
+        >
+          Get Started
+        </button>
       </section>
 
-      <section style={{ textAlign: "center" }}>
-        <h2 style={{ fontSize: "32px", marginBottom: "20px" }}>
+      {/* STATS SECTION */}
+      <section style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: "60px",
+        padding: "60px 20px",
+        background: "white",
+        flexWrap: "wrap"
+      }}>
+        {[
+          { number: "500+", label: "Creators" },
+          { number: "2,800+", label: "Campaigns Launched" },
+          { number: "$80M+", label: "Revenue Generated" }
+        ].map((stat, index) => (
+          <div key={index} style={{ textAlign: "center" }}>
+            <h2 style={{ fontSize: "36px", color: "#4f46e5" }}>{stat.number}</h2>
+            <p style={{ color: "#555" }}>{stat.label}</p>
+          </div>
+        ))}
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" style={{
+        padding: "100px 20px",
+        background: "#f9fafc",
+        textAlign: "center"
+      }}>
+        <h2 style={{ fontSize: "36px", marginBottom: "20px" }}>
           Our Services
         </h2>
-        <p style={{ fontSize: "18px", maxWidth: "700px", margin: "0 auto" }}>
-          We help brands connect with authentic influencers, manage campaigns,
-          and drive real results through data-driven strategies.
+
+        <p style={{ maxWidth: "600px", margin: "0 auto 60px", color: "#555" }}>
+          End-to-end influencer marketing solutions designed to scale your brand.
+        </p>
+
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "30px",
+          flexWrap: "wrap"
+        }}>
+          {[
+            "Influencer Campaign Management",
+            "Brand-Influencer Matchmaking",
+            "Performance Analytics & Reporting"
+          ].map((service, index) => (
+            <div key={index} style={{
+              background: "white",
+              padding: "30px",
+              borderRadius: "12px",
+              width: "280px",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.05)"
+            }}>
+              <h3 style={{ marginBottom: "10px" }}>{service}</h3>
+              <p style={{ color: "#666", fontSize: "14px" }}>
+                Strategic execution designed for measurable growth and ROI.
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* TESTIMONIAL */}
+      <section style={{
+        padding: "100px 20px",
+        textAlign: "center",
+        background: "white"
+      }}>
+        <h2 style={{ fontSize: "32px", marginBottom: "30px" }}>
+          What Our Partners Say
+        </h2>
+
+        <p style={{
+          maxWidth: "600px",
+          margin: "0 auto",
+          fontStyle: "italic",
+          color: "#555"
+        }}>
+          "InfluLink Partners transformed our influencer strategy. We saw measurable
+          growth in engagement and revenue within months."
         </p>
       </section>
+
+      {/* CTA */}
+      <section style={{
+        padding: "100px 20px",
+        textAlign: "center",
+        background: "#4f46e5",
+        color: "white"
+      }}>
+        <h2 style={{ fontSize: "36px", marginBottom: "20px" }}>
+          Ready to Scale Your Brand?
+        </h2>
+
+        <button style={{
+          padding: "14px 28px",
+          fontSize: "16px",
+          backgroundColor: "white",
+          color: "#4f46e5",
+          border: "none",
+          borderRadius: "8px",
+          cursor: "pointer"
+        }}>
+          Book a Strategy Call
+        </button>
+      </section>
+
+      {/* FOOTER */}
+      <footer style={{
+        padding: "40px",
+        textAlign: "center",
+        background: "#111",
+        color: "#aaa"
+      }}>
+        © 2026 InfluLink Partners. All rights reserved.
+      </footer>
 
     </div>
   );
